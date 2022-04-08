@@ -6,4 +6,3 @@ let max = Math.max(...num);
 let min = Math.min(...num);
 
 console.log(min, max);
-
