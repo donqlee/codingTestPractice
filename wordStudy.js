@@ -2,6 +2,7 @@ const fs = require("fs");
 const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
 let input = fs.readFileSync(filePath).toString().trim().toLowerCase();
 const charMap = {};
+console.log(typeof charMap);
 
 for (let char of input){
     charMap[char] = charMap[char] ? charMap[char] + 1 : 1;
