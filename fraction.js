@@ -14,6 +14,26 @@
 // 14 : 2/4
 // 15 : 1/5
 
+
+
+
 const fs = require("fs");
 const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
-let input = fs.readFileSync(filePath).toString().split('');
+let input = fs.readFileSync(filePath).toString().trim();
+let number = Number(input);
+let value = 1;
+while (true) {
+    console.log(number)
+	number -= value;
+	if (number <= 0) {
+		number += value;
+		break;
+	}
+	value++;
+}
+
+if (value % 2 === 1) {
+	console.log(`${value - (number - 1)}/${1 + (number - 1)}`);
+} else {
+	console.log(`${1 + (number - 1)}/${value - (number - 1)}`);
+}
