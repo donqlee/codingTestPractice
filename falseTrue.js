@@ -12,7 +12,6 @@ function solution(absolutes, signs) {
             answer -= absolutes[i]
         }
     }
-    console.log(answer);
     return answer;
 }
 
